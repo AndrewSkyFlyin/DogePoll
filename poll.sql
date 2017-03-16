@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 14, 2017 at 02:43 AM
+-- Generation Time: Mar 09, 2017 at 03:32 AM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -45,10 +45,9 @@ CREATE TABLE `pollform` (
 INSERT INTO `pollform` (`pollid`, `pollq`, `ch_one`, `ch_two`, `ch_three`, `ch_one_count`, `ch_two_count`, `ch_three_count`) VALUES
 (1, 'What is the meaning of life?', '42', 'Anime Waifus', 'Video Games', 0, 2, 0),
 (2, 'What should I have for dinner?', 'Sushi', 'Pizza', 'Hatsune Miku', 1, 1, 5),
-(3, 'Who is the best for your laifu?', 'Ayase', 'Haruka', 'Innoimant', 1, 3, 2),
+(3, 'Who is the best for your laifu?', 'Ayase', 'Haruka', 'Innoimant', 0, 1, 1),
 (4, 'There is a train approaching a track with five people tied to a track.  If you pull the switch it will switch lanes, but the switch lane has 1 person tied to it.  What do you do?', 'Pull the switch.', 'Do nothing.', 'Tell someone else to decide.', 0, 0, 0),
-(5, 'What is the best Chinese webnovel?', 'æˆ‘æ¬²å°å¤©', 'ç›˜é¾™', 'ä¸‰ç•Œç‹¬å°Š', 1, 0, 0),
-(6, 'What do you want to eat?', 'Burgers', 'Pizza', 'Icecream', 0, 0, 1);
+(5, 'What is the best Chinese webnovel?', 'æˆ‘æ¬²å°å¤©', 'ç›˜é¾™', 'ä¸‰ç•Œç‹¬å°Š', 0, 0, 0);
 
 --
 -- Indexes for dumped tables
@@ -68,7 +67,7 @@ ALTER TABLE `pollform`
 -- AUTO_INCREMENT for table `pollform`
 --
 ALTER TABLE `pollform`
-  MODIFY `pollid` mediumint(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `pollid` mediumint(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -1,3 +1,4 @@
+<div style="background-image: url(backgroundpaper.jpg);">
 <form action="add_poll2.php" method="post">
  <p> Fill out contents of your poll here. </p>
  <p> Question:  <input type="text" name="question" size="20" maxlength="200" value="" /> </p>
@@ -6,7 +7,7 @@
  <p> Choice Three: <input type="text" name="choicethree" size="20" maxlength="100" value="" /> </p>
  <input type="submit" name = "add-btn" value="Create poll" /><br>
 </form>
-
+</div>
 <form action="index.php" method="post">
  <input type="submit" value="Homepage" /><br>
 </form>

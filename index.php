@@ -3,23 +3,94 @@ require_once 'dbconnect.php';
 
 ?>
 
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<title>Doge Poll</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Doge Poll</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
-<body>
-<h1>Instant Doge Poll</h1>
-<header class="main-header" role="banner">
-  <img src="meme.jpg" alt="Banner Image"/>
-</header>
-<p>For all your polling needs!</p>
+
+<body style = "background-color: powderblue;">
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Start Dogeing
+                    </a>
+                </li>
+                <li>
+                    <a href="/">Home Page</a>
+                </li>
+                <li>
+                    <a href="/add_poll.php">Create Your Own Poll!</a>
+                </li>
+                <li>
+                    <a href="/view_all.php">View All Polls</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+
+                        <h1>Instant Doge Poll</h1>                        
+                        
+                        <img src = "meme.jpg">                      
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!--Menu Toggle Script-->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
 </body>
+
 </html>
 
-<form action="view_all.php" method="post">
- <input type="submit" value="View all polls" /><br>
-</form>
-
-<form action="add_poll.php" method="post">
- <input type="submit" value="Create a poll" /><br>
-</form>
