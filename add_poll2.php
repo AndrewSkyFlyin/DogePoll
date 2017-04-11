@@ -35,14 +35,16 @@ if (!$error)
 {
   $query = "INSERT INTO pollform (pollq, ch_one, ch_two, ch_three) VALUES ('$question',
     '$choice_one', '$choice_two', '$choice_three')";
-	$result = mysqli_query($link, $query);
+  $result = mysqli_query($link, $query);
 
   if(!$result){
 		$failMsg = "mySQL error.  Unable to add poll.";
 	}
 	else
 	{
-		echo "Poll created.";
+		echo "Poll created.<br>";
+    $pollurl = mysqli_insert_id($link);
+    echo "Poll ID: $pollurl";
 	}
 }
 
