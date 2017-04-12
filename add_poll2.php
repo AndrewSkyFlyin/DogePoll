@@ -45,6 +45,14 @@ if (!$error)
 		echo "Poll created.<br>";
     $pollurl = mysqli_insert_id($link);
     echo "Poll ID: $pollurl";
+    $pollurl2 = ((1103515245 * $pollurl) + 12345) % ((2 ** 31) - 1);
+    $result = is_int($pollurl2);
+    echo $pollurl2;
+
+    if(!$result)
+    {
+      echo "Error<br>";
+    }
 	}
 }
 
