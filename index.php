@@ -41,7 +41,7 @@ require_once 'dbconnect.php';
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                     <a href="#">
-                        Doge Menu
+                        Start Dogeing
                     </a>
                 </li>
                 <li>
