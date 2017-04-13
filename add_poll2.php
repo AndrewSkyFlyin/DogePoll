@@ -38,26 +38,34 @@ if (!$error)
   $result = mysqli_query($link, $query);
 
   if(!$result){
-		$failMsg = "mySQL error.  Unable to add poll.";
+		echo "mySQL error.  Unable to add poll.<br>";
 	}
 	else
 	{
 		echo "Poll created.<br>";
     $pollurl = mysqli_insert_id($link);
-    echo "Poll ID: $pollurl";
+    echo "Poll ID: $pollurl<br>";
     $pollurl2 = ((1103515245 * $pollurl) + 12345) % ((2 ** 31) - 1);
     $result = is_int($pollurl2);
-    echo $pollurl2;
+    echo "LCG ID :$pollurl2<br>";
 
     if(!$result)
     {
       echo "Error<br>";
     }
+
+    $query = "UPDATE pollform SET pollurl = $pollurl2 WHERE pollid = $pollurl";
+    $result = mysqli_query($link, $query);
+
+    if(!$result){
+  		echo "mySQL error.  Unable to insert LCG url.<br>";
+  	}
+
 	}
 }
 
 else {
-  echo $errorMsg;
+  echo "Unknown error.<br>";
 }
 
 ?>
