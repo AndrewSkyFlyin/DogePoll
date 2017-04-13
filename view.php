@@ -51,6 +51,10 @@ else
 
 ?>
 
+<form action="results.php?id={$row['pollid']}" method="post">
+ <input type="submit" value="View Results" /><br>
+</form
+
 <form action="view_all.php" method="post">
  <input type="submit" value="Return to listings" /><br>
 </form>
