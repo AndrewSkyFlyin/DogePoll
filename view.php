@@ -1,3 +1,9 @@
+<?php
+require_once 'dbconnect.php';
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,9 +64,9 @@
                     <div class="col-lg-12">
                         <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
 
-                        <h1>Doge Poll Listing</h1>                        
-                        
-<?php
+                        <h1>Instant Doge Poll</h1>
+
+                        <?php
 require_once 'dbconnect.php';
 
 if(!isset($_GET['id'])) {
@@ -119,11 +125,7 @@ else
 
 <form action="index.php" method="post">
  <input type="submit" value="Homepage" /><br>
-</form>
-
-                        
-
-
+</form>                                                                  
                     </div>
                 </div>
             </div>
@@ -150,5 +152,7 @@ else
 </body>
 
 </html>
+
+
 
 
