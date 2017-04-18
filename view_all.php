@@ -81,9 +81,7 @@ if(!$result){
 
 ?>
 <br>
-<form action="index.php" method="post">
- <input type="submit" value="Homepage" /><br>
-</form>
+
 
                     </div>
                 </div>
