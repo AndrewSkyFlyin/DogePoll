@@ -45,7 +45,7 @@ if (!$error)
 		echo "Poll created.<br>";
     $pollurl = mysqli_insert_id($link);
     echo "Poll ID: $pollurl<br>";
-    $pollurl2 = ((1103515245 * $pollurl) + 12345) % ((2 ** 31) - 1);
+    $pollurl2 = ((8121 * $pollurl) + 28411) % 134456;
     $result = is_int($pollurl2);
     echo "LCG ID :$pollurl2<br>";
 

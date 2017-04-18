@@ -8,7 +8,7 @@ if(!isset($_GET['id'])) {
 
 $id = $_GET['id'];
 
-$query = "SELECT * FROM pollform WHERE pollid = $id";
+$query = "SELECT * FROM pollform WHERE pollurl = $id";
 $result = mysqli_query($link, $query);
 if(!$result){
 		echo "<br>Wow, much error.";
@@ -20,13 +20,13 @@ else
 
   while($row = mysqli_fetch_array($result)) {
     echo "<tr><td>";
-    echo "<Form name ='votingform' method ='post' action ='results.php?id={$row['pollid']}'>
+    echo "<Form name ='votingform' method ='post' action ='results.php?id={$row['pollurl']}'>
           Poll ID: {$row['pollid']}<br>
           Question: {$row['pollq']}<br>
           <input type = 'radio' name ='radio' value = 'one' >{$row['ch_one']}<br>
           <input type = 'radio' name ='radio' value = 'two' >{$row['ch_two']}<br>
           <input type = 'radio' name ='radio' value = 'three' >{$row['ch_three']}<br>
-          <input type = 'hidden' name = 'view_pollid' value = {$row['pollid']}>
+          <input type = 'hidden' name = 'view_pollurl' value = {$row['pollurl']}>
           <input type = 'hidden' name = 'one_count' value = {$row['ch_one_count']}>
           <input type = 'hidden' name = 'two_count' value = {$row['ch_two_count']}>
           <input type = 'hidden' name = 'three_count' value = {$row['ch_three_count']}>

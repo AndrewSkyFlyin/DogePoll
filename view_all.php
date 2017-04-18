@@ -22,7 +22,7 @@ if(!$result){
 
     while($row = mysqli_fetch_array($result)) {
     	echo "<tr><td>";
-      echo "<a href='view.php?id=".$row['pollid']."'>".$row['pollq']."</a>";
+      echo "<a href='view.php?id=".$row['pollurl']."'>".$row['pollq']."</a>";
     	echo "</td></tr>";
     }
     echo "</table>";

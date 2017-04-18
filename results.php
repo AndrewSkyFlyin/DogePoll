@@ -5,27 +5,27 @@ if(isset($_POST['vote-btn'])) {
   $ch_one_count = $_POST['one_count'];
   $ch_two_count = $_POST['two_count'];
   $ch_three_count = $_POST['three_count'];
-  $pollid = $_POST['view_pollid'];
+  $pollid = $_POST['view_pollurl'];
   $answer = $_POST['radio'];
 
   if($answer == "one") {
     ++$ch_one_count;
-    $query = "UPDATE pollform SET ch_one_count = '$ch_one_count' WHERE pollid = '$pollid'";
+    $query = "UPDATE pollform SET ch_one_count = '$ch_one_count' WHERE pollurl = '$pollid'";
   }
   else if ($answer == "two") {
     ++$ch_two_count;
-    $query = "UPDATE pollform SET ch_two_count = '$ch_two_count' WHERE pollid = '$pollid'";
+    $query = "UPDATE pollform SET ch_two_count = '$ch_two_count' WHERE pollurl = '$pollid'";
   }
   else if ($answer == "three") {
     ++$ch_three_count;
-    $query = "UPDATE pollform SET ch_three_count = '$ch_three_count' WHERE pollid = '$pollid'";
+    $query = "UPDATE pollform SET ch_three_count = '$ch_three_count' WHERE pollurl = '$pollid'";
   }
 
   $result = mysqli_query($link, $query);
   $count = mysqli_affected_rows($link);
   if ($result and $count == 1) {
     echo "Results";
-    $query = "SELECT * FROM pollform WHERE pollid = $pollid";
+    $query = "SELECT * FROM pollform WHERE pollurl = $pollid";
     $result = mysqli_query($link, $query);
 
     echo "<table>";
@@ -61,7 +61,7 @@ else if (isset($_GET['id'])) {
   $pollid = $_GET['id'];
 
   echo "Results";
-  $query = "SELECT * FROM pollform WHERE pollid = $pollid";
+  $query = "SELECT * FROM pollform WHERE pollurl = $pollid";
   $result = mysqli_query($link, $query);
 
   echo "<table>";
@@ -139,5 +139,5 @@ else {
 
     <form action='index.php' method='post'>
     <input type='submit' value='Homepage' /><br>
-    </form>    
+    </form>
 </body>
