@@ -72,15 +72,9 @@ if(!$result){
     echo "<table border='2'>";
 
     while($row = mysqli_fetch_array($result)) {
-<<<<<<< HEAD
     	echo "<tr><td>";
       echo "<a href='view.php?id=".$row['pollurl']."'>".$row['pollq']."</a>";
     	echo "</td></tr>";
-=======
-        echo "<tr><td>";
-      echo "<a href='view.php?id=".$row['pollid']."'>".$row['pollq']."</a>";
-        echo "</td></tr>";
->>>>>>> refs/remotes/origin/jonathan
     }
     echo "</table>";
     }
@@ -90,7 +84,7 @@ if(!$result){
 <form action="index.php" method="post">
  <input type="submit" value="Homepage" /><br>
 </form>
-                                             
+
                     </div>
                 </div>
             </div>

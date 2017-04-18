@@ -89,7 +89,7 @@ else
   while($row = mysqli_fetch_array($result)) {
     echo "<tr><td>";
     echo "<Form name ='votingform' method ='post' action ='results.php?id={$row['pollurl']}'>
-          Poll ID: {$row['pollid']}<br>
+          Poll ID: {$row['pollurl']}<br>
           Question: {$row['pollq']}<br>
           <input type = 'radio' name ='radio' value = 'one' >{$row['ch_one']}<br>
           <input type = 'radio' name ='radio' value = 'two' >{$row['ch_two']}<br>
@@ -125,7 +125,7 @@ else
 
 <form action="index.php" method="post">
  <input type="submit" value="Homepage" /><br>
-</form>                                                                  
+</form>
                     </div>
                 </div>
             </div>
@@ -152,7 +152,3 @@ else
 </body>
 
 </html>
-
-
-
-

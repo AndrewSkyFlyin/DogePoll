@@ -64,8 +64,8 @@ require_once 'dbconnect.php';
                     <div class="col-lg-12">
                         <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
 
-                        <h1>Instant Doge Poll</h1>                        
-                                          
+                        <h1>Instant Doge Poll</h1>
+
                     </div>
                 </div>
             </div>
@@ -130,7 +130,7 @@ if(isset($_POST['vote-btn'])) {
 
     while($row = mysqli_fetch_array($result)) {
       echo "<tr><td>";
-      echo "Poll ID: {$row['pollid']}<br>";
+      echo "Poll ID: {$row['pollurl']}<br>";
       echo "Question: {$row['pollq']}<br>";
       $pieTitle = $row['pollq'];
       echo "{$row['ch_one']} - {$row['ch_one_count']} votes<br>";
