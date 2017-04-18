@@ -35,7 +35,7 @@
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                     <a href="#">
-                        Start Dogeing
+                        Doge Menu
                     </a>
                 </li>
                 <li>
@@ -56,15 +56,32 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
-
-                        
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>                        
 						<form action="add_poll2.php" method="post"><center><font face = "Didot">
- 						<p> Fill out contents of your poll here. </p>
- 						<p> Question:  <input type="text" name="question" size="20" maxlength="200" value="" /> </p>
-						<p> Choice One: <input type="text" name="choiceone" size="20" maxlength="100" value="" /> </p>
-						<p> Choice Two: <input type="text" name="choicetwo" size="20" maxlength="100" value="" /> </p>
-						<p> Choice Three: <input type="text" name="choicethree" size="20" maxlength="100" value="" /> </p>
+
+                        <table>
+                        
+                        <p> Fill out contents of your poll here. </p>
+ 						<tr>
+                        <th><p align="right"> Question: </th>
+                        <th><input type="text" name="question" size="20" maxlength="200" value="" /> </p></th>
+                        </tr>
+
+                        <tr>
+						<th><p align="right"> Choice One: </th>
+                        <th><input type="text" name="choiceone" size="20" maxlength="100" value="" /> </p></th>
+						</tr>
+
+                        <tr>
+                        <th><p align="right"> Choice Two: </th>
+                        <th><input type="text" name="choicetwo" size="20" maxlength="100" value="" /> </p></th>
+						</tr>
+
+                        <tr>
+                        <th><p align="right"> Choice Three: </th>
+                        <th><input type="text" name="choicethree" size="20" maxlength="100" value="" /> </p></th>
+                        </tr>
+                        </table>
 </font>
 <input type="submit" name = "add-btn" value="Create poll" /><br>
 </form>
