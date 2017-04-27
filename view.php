@@ -87,9 +87,9 @@ else
   echo "<table border='2'>";
 
   while($row = mysqli_fetch_array($result)) {
+    $actual_link = $row['pollurl'];
     echo "<tr><td>";
     echo "<Form name ='votingform' method ='post' action ='results.php?id={$row['pollurl']}'>
-          Poll ID: {$row['pollurl']}<br>
           Question: {$row['pollq']}<br>
           <input type = 'radio' name ='radio' value = 'one' >{$row['ch_one']}<br>
           <input type = 'radio' name ='radio' value = 'two' >{$row['ch_two']}<br>
@@ -148,6 +148,10 @@ else
         $("#wrapper").toggleClass("toggled");
     });
     </script>
+
+    <?php
+    echo '<input type="button" value = "Share" onclick="alert(\'http://localhost/view.php?id='.$actual_link.'\')"/>';
+    ?>
 
 </body>
 
