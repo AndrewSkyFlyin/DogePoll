@@ -72,10 +72,10 @@ require_once 'dbconnect.php';
 if(isset($_POST['add-btn']))
 {
   unset($_POST['add-btn']);
-  $question = $_POST['question'];
-  $choice_one = $_POST['choiceone'];
-  $choice_two = $_POST['choicetwo'];
-  $choice_three = $_POST['choicethree'];
+  $question =  mysqli_real_escape_string($link, $_POST['question']);
+  $choice_one = mysqli_real_escape_string($link, $_POST['choiceone']);
+  $choice_two = mysqli_real_escape_string($link, $_POST['choicetwo']);
+  $choice_three = mysqli_real_escape_string($link, $_POST['choicethree']);
 }
 
 $error = false;
