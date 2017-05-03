@@ -64,8 +64,8 @@ require_once 'dbconnect.php';
                     <div class="col-lg-12">
                         <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
 
-                        <h1>Instant Doge Poll</h1>                        
-                        
+                        <h1>Instant Doge Poll</h1>
+
                         <?php
 require_once 'dbconnect.php';
 
@@ -114,7 +114,7 @@ if (!$error)
     $pollurl = mysqli_insert_id($link);
     $pollurl2 = ((8121 * $pollurl) + 28411) % 134456;
     $result = is_int($pollurl2);
-    
+
 
     if(!$result)
     {
@@ -127,6 +127,8 @@ if (!$error)
     if(!$result){
       echo "mySQL error.  Unable to insert LCG url.<br>";
     }
+
+    echo "You can find your link <a href =\"/view.php?id=$pollurl2\">here</a>";
 
   }
 }
@@ -172,6 +174,3 @@ else {
 </body>
 
 </html>
-
-
-
