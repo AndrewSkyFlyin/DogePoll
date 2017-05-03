@@ -8,8 +8,8 @@ require_once 'dbconnect.php';
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
     <meta name="description" content="">
@@ -124,8 +124,15 @@ else
 </form>
 
 <form action="index.php" method="post">
- <input type="submit" value="Homepage" /><br>
+ <input type="submit" value="Homepage" /><br><br>
 </form>
+
+<h2>Shareable Link</h2>
+    <?php
+    echo '<input id="post-shortlink" value="http://localhost/view.php?id='.$actual_link.'"/>';
+    ?>
+    <button class="button" id="copy-button" data-clipboard-target="#post-shortlink">Copy</button>
+
                     </div>
                 </div>
             </div>
@@ -149,9 +156,10 @@ else
     });
     </script>
 
-    <?php
-    echo '<input type="button" value = "Share" onclick="alert(\'http://localhost/view.php?id='.$actual_link.'\')"/>';
-    ?>
+    <!-- Shareable Link Script-->
+    <script src="clipboard/dist/clipboard.min.js"></script>
+    <script> (function(){
+    new Clipboard('#copy-button'); })(); </script>
 
 </body>
 
