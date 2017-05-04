@@ -195,11 +195,15 @@ else {
 
     <!--Div that will hold the pie chart-->
     <div id="chart_div"></div>
-
     <form action='index.php' method='post'>
     <input type='submit' value='Homepage' /><br>
     </form>
 
+<h2>Shareable Link</h2>
+    <?php
+    echo '<input id="post-shortlink" value="http://localhost/view.php?id='.$pollid.'"/>';
+    ?>
+    <button class="button" id="copy-button" data-clipboard-target="#post-shortlink">Copy</button>
 
 
 
@@ -226,6 +230,9 @@ else {
     });
     </script>
 
+    <script src="clipboard/dist/clipboard.min.js"></script>
+    <script> (function(){
+    new Clipboard('#copy-button'); })(); </script>
 
 
 
