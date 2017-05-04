@@ -44,9 +44,6 @@
                 <li>
                     <a href="/add_poll.php">Create Your Own Poll!</a>
                 </li>
-                <li>
-                    <a href="/view_all.php">View All Polls</a>
-                </li>
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
