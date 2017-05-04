@@ -114,7 +114,6 @@ if (!$error)
     $pollurl = mysqli_insert_id($link);
     $pollurl2 = ((8121 * $pollurl) + 28411) % 134456;
     $result = is_int($pollurl2);
-    
 
     if(!$result)
     {
@@ -128,6 +127,8 @@ if (!$error)
       echo "mySQL error.  Unable to insert LCG url.<br>";
     }
 
+    echo "Redirecting to your poll in 5 seconds...";
+    echo "Or you can find your link <a href =\"/view.php?id=$pollurl2\">here</a>";
   }
 }
 
@@ -169,6 +170,15 @@ else {
     });
     </script>
 
+<?php
+echo "
+    <script>
+    setTimeout(function(){
+       window.location='view.php?id=$pollurl2';
+    }, 5000);
+    
+</script>";
+?>
 </body>
 
 </html>
