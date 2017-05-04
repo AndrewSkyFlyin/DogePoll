@@ -116,10 +116,6 @@ else
 
 ?>
 
-<form action="view_all.php" method="post">
- <input type="submit" value="Return to listings" /><br>
-</form>
-
 <form action="index.php" method="post">
  <input type="submit" value="Homepage" /><br><br>
 </form>

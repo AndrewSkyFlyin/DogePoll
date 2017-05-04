@@ -63,35 +63,6 @@ require_once 'dbconnect.php';
 
                         <h1>Instant Doge Poll</h1>
 
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /#page-content-wrapper -->
-
-    </div>
-    <!-- /#wrapper -->
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!--Menu Toggle Script-->
-    <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-    </script>
-
-</body>
-
-</html>
-
-
-
 <?php
 require_once 'dbconnect.php';
 
@@ -127,7 +98,6 @@ if(isset($_POST['vote-btn'])) {
 
     while($row = mysqli_fetch_array($result)) {
       echo "<tr><td>";
-      echo "Poll ID: {$row['pollurl']}<br>";
       echo "Question: {$row['pollq']}<br>";
       $pieTitle = $row['pollq'];
       echo "{$row['ch_one']} - {$row['ch_one_count']} votes<br>";
@@ -163,7 +133,6 @@ else if (isset($_GET['id'])) {
 
   while($row = mysqli_fetch_array($result)) {
     echo "<tr><td>";
-    echo "Poll ID: {$row['pollid']}<br>";
     echo "Question: {$row['pollq']}<br>";
     echo "{$row['ch_one']} - {$row['ch_one_count']} votes<br>";
     echo "{$row['ch_two']} - {$row['ch_two_count']} votes<br>";
@@ -194,7 +163,7 @@ else {
 #echo $ch_three_count . "<br>";
 ?>
 
-<head>
+
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script type="text/javascript">
   google.charts.load('current', {packages: ['corechart']});
@@ -223,16 +192,43 @@ else {
         chart.draw(data, options);
       }
       </script>
-</head>
-<body>
+
     <!--Div that will hold the pie chart-->
     <div id="chart_div"></div>
-
-    <form action='view_all.php' method='post'>
-    <input type='submit' value='Return to listings' /><br>
-    </form>
 
     <form action='index.php' method='post'>
     <input type='submit' value='Homepage' /><br>
     </form>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!--Menu Toggle Script-->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+
+
+
 </body>
+
+</html>
