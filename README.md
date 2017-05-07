@@ -1,3 +1,7 @@
+## About DogePoll
+
+DogePoll is a web polling application that allows users to create poll questions along with three custom answers of their choice.  Once the poll is created, users will have the option to copy the poll url to their clipboard via the share button to share the poll with other users.
+
 # [Start Bootstrap](http://startbootstrap.com/) - [Simple Sidebar](http://startbootstrap.com/template-overviews/simple-sidebar/)
 
 [Simple Sidebar](http://startbootstrap.com/template-overviews/simple-sidebar/) is an off canvas sidebar navigation template for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
